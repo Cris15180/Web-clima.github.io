@@ -123,7 +123,7 @@ header{
 }
 
 .unidad-opcion.active::after {
-  content: url(/weather-app-main/assets/images/icon-checkmark.svg);
+  content: url(assets/images/icon-checkmark.svg);
   font-size: 14px;
 }
 
@@ -157,7 +157,7 @@ header{
     border: none;
     border-radius: 15px;
     background-color: hsl(243, 23%, 30%);
-    background-image: url('/weather-app-main/assets/images/icon-search.svg'); 
+    background-image: url('assets/images/icon-search.svg'); 
     background-repeat: no-repeat;
     background-position: 15px center; 
     background-size: 18px;
@@ -201,7 +201,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url(/weather-app-main/assets/images/bg-today-large.svg);
+    background-image: url(assets/images/bg-today-large.svg);
     background-size: 74vh;
     background-repeat: no-repeat;
     color: hsl(0, 0%, 100%);
@@ -389,7 +389,7 @@ header{
     height: 38vh;
     width: 44vh;
     background-size: 44vh;
-    background-image: url(/weather-app-main/assets/images/bg-today-small.svg);
+    background-image: url(images/bg-today-small.svg);
     background-repeat: no-repeat;
 }
 

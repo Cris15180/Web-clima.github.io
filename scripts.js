@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listaHoraria.innerHTML = data.map(item => `
       <article class="item-horario">
         <div class="hora-izquierda">
-          <img src="/weather-app-main/assets/images/${item.icon}" width="20">
+          <img src="assets/images/${item.icon}" width="20">
           <span>${item.time}</span>
         </div>
         <span>${item.temp}°</span>
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="dia">${dias[dia]}</div>
 
           <div class="icono-tiemp">
-            <img src="/weather-app-main/assets/images/${getWeatherIcon(daily.weathercode[i])}" width="30">
+            <img src="assets/images/${getWeatherIcon(daily.weathercode[i])}" width="30">
           </div>
 
           <div class="temperatura">
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardPrecip.textContent = `0 mm`;
 
     document.getElementById('current-icon').src =
-      `/weather-app-main/assets/images/${getWeatherIcon(current.weathercode)}`;
+      `assets/images/${getWeatherIcon(current.weathercode)}`;
 
     // ||||||||||||||||||||||
     const hourlyData = data.hourly.time.slice(0,8).map((t,i)=>({
