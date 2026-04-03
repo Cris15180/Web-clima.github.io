@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Weather app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script
+    src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js"
+    type="module"
+  ></script>
+
+</head>
+<body>
+
+  <div class="carga" id="carga">
+    <div class="circulo"> 
+      <dotlottie-wc
+        src="https://lottie.host/5ef5e0a1-939d-4758-962f-c02272d7c520/vqOzy7GrNE.lottie"
+        style="width: 300px;height: 300px"
+        autoplay
+        loop>
+      </dotlottie-wc>
+    </div>
+  </div>
+
+
+  <header>
+      <div class="log">
+        <img src="/weather-app-main/assets/images/logo.svg" alt="logo-weather">
+      </div>
+
+      <div class="unidades">
+        <button class="alter-unidades"> <img src="/weather-app-main/assets/images/icon-units.svg" alt=""> Unidades<img src="/weather-app-main/assets/images/icon-dropdown.svg" alt=""></button>
+          <div class="unidades-menu" role="menu" hidden>
+            <p class="titulo-unidad">Cambia la unidad</p>
+
+            <div class="grupo-unidades">
+              <p>Temperatura</p>
+
+              <div class="unidad">
+                <button class="unidad-opcion active" data-group="temp" data-value="c">Celsius (°C)</button>
+                <button class="unidad-opcion" data-group="temp" data-value="f">Fahrenheit (°F)</button>
+              </div>
+
+            </div>
+
+            <div class="grupo-unidades">
+              <p>Velocidad del viento</p>
+              
+                <div class="unidad">
+                  <button class="unidad-opcion active" data-group="viento" data-value="Km/h">Km/h</button>
+                  <button class="unidad-opcion" data-group="viento" data-value="mph">mph</button>
+                </div>
+
+            </div>
+
+            <div class="grupo-unidades">
+              <p>Precipitacion</p>
+
+              <div class="unidad">
+                <button class="unidad-opcion active" data-group="precip" data-value="mm">Milimetros (mm)</button>
+                <button class="unidad-opcion" data-group="precip" data-value="in">pulgadas (in)</button>
+              </div>
+
+
+            </div>
+
+          </div>
+      </div>
+  </header>
+
+  <main>
+    <section class="busc-tit">
+        <div class="titulo">
+          <h1>¿Como se ve el cielo hoy?</h1>
+        </div>
+
+        <div class="buscador">
+          <input id="city-input" type="text" placeholder="Buscar un lugar...">
+          <button id="search-button" type="button">Buscar</button>
+        </div>
+    </section>
+
+    <section class="cuadros">
+
+    <div class="cuadros-izq">
+        <div class="temp-especifica">
+          <div class="lugar">
+            <p id="place-name"></p>
+          </div>
+
+          <div class="icn-temp">          
+            <img id="current-icon" src="/weather-app-main/assets/images/" alt="Current weather" width="150px" height="150px">
+            <h1 id="main-temp"></h1>
+          </div>
+
+        </div>
+          <div class="datos">
+          <div class="cards">
+            <p>Se siente como</p>
+            <h3 id="feels-like"></h3>
+          </div>
+
+          <div class="cards">
+            <p>Humedad</p>
+            <h3 id="humidity"></h3>
+          </div>
+
+          <div class="cards">
+            <p>Viento</p>
+            <h3 id="wind-speed"></h3>
+          </div>
+
+          <div class="cards">
+            <p>Precipitacion</p>
+            <h3 id="precipitation"></h3>
+          </div>
+
+        </div>
+        
+        <div class="dia-tiempo">
+          <p>Pronóstico diario</p>
+          <div id="daily-forecast" class="pron-diario">
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Martes
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Miercoles
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Jueves
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Viernes
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Sabado
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Domingo
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+
+            <div class="card-tiemp">
+              <div class="dia">
+                Lunes
+              </div>
+              <div class="icono-tiemp">
+
+              </div>
+
+              <div class="temperatura">
+
+              </div>
+            </div>
+                    
+          </div>
+        </div>
+    </div>
+
+
+      <div class="cuadros-der">
+        <div class="dias">
+          <h1>Previsión horaria</h1>
+          <button id="seleccio-de-prevision-horaria"> Jueves <img src="/weather-app-main/assets/images/icon-dropdown.svg" alt=""></button>
+
+
+
+        </div>
+        <div id="lista-horaria" class="lista-horaria">
+          
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
+</body>
+</html>

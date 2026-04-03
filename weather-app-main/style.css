@@ -1,0 +1,426 @@
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.montserrat-mons{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+background-color: #02012B;
+}
+
+.carga{
+    background-color: #02012B;
+    width: 200vh;
+    height: 100vh;
+    z-index: 1000000;
+    position: fixed;
+    top: 0;
+
+    animation: salida 2s ease forwards;
+}
+
+@keyframes salida {
+  0% {
+    opacity: 1; 
+  }
+  80% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.circulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+
+
+.carga2{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20vh 0 20vh;
+}
+
+.alter-unidades{
+    font-family: "Montserrat", sans-serif;
+    padding: 9px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(243, 23%, 30%);
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.unidades{
+    position: relative;
+    display: inline-block;
+}
+
+.unidades-menu{
+    position: absolute;
+    right: 0vh;
+    z-index: 1000;
+    padding: 0 2vh 2vh 2vh;
+    background-color: #25253F;
+    color: hsl(240, 6%, 70%);
+    font-family: "Montserrat", sans-serif;
+    width: 18vh;
+    border-radius: 10px;
+    top: 38px;
+}
+
+.grupo-unidades{
+    border-bottom: 1px solid hsla(240, 6%, 70%, 0.248);
+    display: flex;
+    flex-direction: column;
+}
+
+.unidad-opcion{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    color: hsl(0, 0%, 100%);
+    background-color: #25253F;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4vh;
+}
+
+.unidad-opcion:hover {
+  background: #32324A;
+}
+
+.unidad-opcion.active {
+  background: #32324A;
+  color: #fff;
+  font-weight: 500;
+}
+
+.unidad-opcion.active::after {
+  content: url(/weather-app-main/assets/images/icon-checkmark.svg);
+  font-size: 14px;
+}
+
+.unidad{
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 6px;
+}
+
+.buscador{
+    display: flex;
+    gap: 2vh;
+}
+
+.busc-tit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+
+#city-input{
+    width: 30vh;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: hsl(243, 23%, 30%);
+    background-image: url('/weather-app-main/assets/images/icon-search.svg'); 
+    background-repeat: no-repeat;
+    background-position: 15px center; 
+    background-size: 18px;
+    padding-left: 45px; 
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+#city-input::placeholder{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%); 
+}
+
+#search-button{
+    width: 90px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: hsl(233, 67%, 56%);
+    color: hsl(0, 0%, 100%);
+}
+
+.cuadros{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+
+.temp-especifica{
+    width: 74vh;
+    height: 27vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(/weather-app-main/assets/images/bg-today-large.svg);
+    background-size: 74vh;
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+.icn-temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.lugar p{
+    display: flex;
+    font-size: 4vh;
+}
+
+.datos{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+
+.cards{
+    background-color: #25253F ;
+    border: 2px solid hsl(243, 23%, 30%);
+    border-radius: 7px;
+    width: 140px;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cards h3{
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.cards p{
+    color: hsl(240, 6%, 70%);
+    font-weight: 500;
+}
+
+.dia-tiempo p{
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding-top: 2vh;
+}
+
+.pron-diario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-tiemp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #25253F ;
+    border: 2px solid hsl(243, 23%, 30%);
+    border-radius: 7px;
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    width: 7vh;
+    height: 11vh;
+    padding: 1vh;
+    gap: 2vh;
+}
+
+
+
+.cuadros-der{
+    background-color: #25253F;
+    padding: 2vh;
+    border-radius: 15px;
+}
+
+.dias{
+   display: flex;
+   align-items: center; 
+   justify-content: space-between;
+   gap: 5vh;
+    color: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+}
+
+#seleccio-de-prevision-horaria{
+    font-family: "Montserrat", sans-serif;
+    padding: 9px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(243, 23%, 30%);
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 10vh;
+}
+
+.lista-horaria{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.item-horario{
+    font-family: "Montserrat", sans-serif;
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    padding:0.8rem; 
+    border-radius:0.65rem; 
+    background:rgba(255,255,255,0.06); 
+    margin-bottom:0.45rem;
+    color: hsl(0, 0%, 100%);
+    height: 3.5vh;
+}
+
+.hora-izquierda{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.hora-izquierda img{
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (max-width: 375px) {
+ 
+.log img{
+    width: 20vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.unidades-menu{
+    position: absolute;
+    left: -4vh;
+}
+
+.titulo{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 0 3vh 0;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-button {
+    width: 36vh;
+}
+
+.cuadros{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* align-content: center; */
+        justify-content: center;
+        align-items: flex-start;
+}
+
+.temp-especifica{
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+    width: 44vh;
+    background-size: 44vh;
+    background-image: url(/weather-app-main/assets/images/bg-today-small.svg);
+    background-repeat: no-repeat;
+}
+
+.lugar{
+    width: 36vh;
+}
+
+.datos{
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    padding: 1vh;
+    width: 42vh;
+    gap: 2vh;
+}
+
+.icono-tiemp img{
+    width: 8vh;
+}
+
+.card-tiemp{
+    width: 10vh;
+    height: 15vh;
+    gap: 1vh;
+}
+
+.pron-diario{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    padding: 1vh;
+    width: 42vh;
+    gap: 2vh;
+}
+
+}
