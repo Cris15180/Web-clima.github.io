@@ -1,6 +1,6 @@
 Pagina elaborada como proyecto de aprendizaje, se elaboro una copia de la pagina de clima original.
 
-El siguiente tezto proviene de la pagina donde proviene la idea.
+El siguiente texto proviene de la pagina donde proviene la idea.
 
 
 
