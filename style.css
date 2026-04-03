@@ -337,10 +337,20 @@ header{
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
  
+.circulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 55vh;  
+}
+
+
+
 .log img{
-    width: 20vh;
+    width: 23vh;
 }
 
 header{
@@ -352,7 +362,7 @@ header{
 
 .unidades-menu{
     position: absolute;
-    left: -4vh;
+    left: -2vh;
 }
 
 .titulo{
@@ -370,27 +380,32 @@ header{
     align-items: center;
 }
 
+#city-input{
+    width: 39vh;
+}
+
 #search-button {
-    width: 36vh;
+    width: 45vh;
 }
 
 .cuadros{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        /* align-content: center; */
-        justify-content: center;
-        align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4vh;
 }
 
 .temp-especifica{
     display: flex;
     flex-direction: column;
-    height: 38vh;
-    width: 44vh;
-    background-size: 44vh;
-    background-image: url(images/bg-today-small.svg);
+    height: 44vh;
+    width: 53vh;
+    background-size: 50vh;
+    background-image: url(assets/images/bg-today-small.svg);
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .lugar{
@@ -401,7 +416,6 @@ header{
     grid-template-columns: repeat(2, 1fr);
     display: grid;
     padding: 1vh;
-    width: 42vh;
     gap: 2vh;
 }
 
@@ -410,16 +424,15 @@ header{
 }
 
 .card-tiemp{
-    width: 10vh;
-    height: 15vh;
+    width: 13vh;
+    height: 16vh;
     gap: 1vh;
 }
 
 .pron-diario{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     display: grid;
     padding: 1vh;
-    width: 42vh;
     gap: 2vh;
 }
 
