@@ -2,6 +2,7 @@ Pagina elaborada como proyecto de aprendizaje, se elaboro una copia de la pagina
 
 El siguiente texto proviene de la pagina donde proviene la idea.
 
+Por este link podra visualizar la pagina web: (https://cris15180.github.io/Web-clima.github.io/)
 
 
 
