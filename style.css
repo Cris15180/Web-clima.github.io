@@ -423,10 +423,6 @@ header{
     width: 36vh;
 }
 
-.dia-tiempo{
-
-}
-
 .datos{
     grid-template-columns: repeat(2, 1fr);
     display: grid;
